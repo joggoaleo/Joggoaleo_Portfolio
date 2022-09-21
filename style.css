@@ -1,10 +1,70 @@
 @font-face {
-  font-family: 'ulsanjunggu';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/ulsanjunggu.woff2') format('woff2');
+  font-family: "EF_MACHO";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_MACHO.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
-body {
-  font-family: 'ulsanjunggu';
+@font-face {
+  font-family: "MaplestoryOTFBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --mainColor: #fa780a;
+}
+
+@keyframes bgFadeOut {
+  0% {
+    background-color: var(--mainColor);
+  }
+
+  50%{
+    background-color: rgb(64, 34, 34);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.myLanguage {
+  animation-name: bgFadeOut;
+  animation-duration: 10s;
+}
+
+span {
+  font-family: "MaplestoryOTFBold";
+  margin-left: 12px;
+  font-size: 36px;
+}
+
+.myName {
+  text-decoration: var(--mainColor);
+}
+
+button {
+  background-color: white;
+  border: 1px solid black;
+  padding: 12px;
+  margin-top: 12px;
+  margin-left: 12px;
+  font-size: 20px;
+  font-family: "EF_MACHO";
+  /* box-shadow: -4px -4px 0 -2px #fa780a, 4px 4px 0 -2px #fa780a; */
+  transition: all 0.5s;
+}
+
+button:hover {
+  box-shadow: -4px -4px 0 0px #fa780a, 4px 4px 0 0px #fa780a;
+}
+
+/* 클릭할 때 */
+button:active {
+  box-shadow: -4px -4px 0 0px #c76108, 4px 4px 0 0px #c76108;
+  transition: all 0.1s;
 }
